@@ -128,7 +128,7 @@ up through time _t_; any event following this watermark whose timestamp is &le; 
 In order to perform event-time-based event processing, Flink needs to know the time associated with
 each event, and it also needs the stream to include watermarks.
 
-The Taxi data sources used in the hands-on exercises take care of these details for you. But in your
+The Taxi data sources used in the hands-on exercises take care of these details for you (up to version 1.13, later versions require implementing the strategy in the solution). But in your
 own applications you will have to take care of this yourself, which is usually done by implementing
 a class that extracts the timestamps from the events, and generates watermarks on demand. The
 easiest way to do this is by using a `WatermarkStrategy`:
